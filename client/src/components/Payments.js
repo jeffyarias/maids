@@ -5,7 +5,6 @@ class Payments extends Component {
  render() {
 
 
-
 return(
 
 
