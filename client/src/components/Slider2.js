@@ -11,7 +11,7 @@ class Slider2 extends Component {
  
   const auto = true; // Auto scroll
   const intervalTime = 3000;
-  let slideInterval;
+
   //const slides =  document.querySelectorAll('.slide');
   //console.log(slides);
   const nextSlide = () => {
@@ -37,7 +37,7 @@ class Slider2 extends Component {
 
   if (auto) {
     // Run next slide at interval time
-    slideInterval = setInterval(nextSlide, intervalTime);
+    setInterval(nextSlide, intervalTime);
     
   }
 

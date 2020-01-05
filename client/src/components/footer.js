@@ -1,4 +1,5 @@
 import React from 'react';
+import classes from './footer.module.css';
 
 
 const footer = ()=> {
@@ -8,7 +9,7 @@ const year = date.getFullYear();
 return(
 <div>
     
-<p>Boston Maids &copy; {year}</p>
+<p className={classes.footerparag}>Boston Maids &copy; {year}</p>
 
 
 </div>
