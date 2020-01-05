@@ -2,6 +2,10 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+const keys = require('./config/keys');
+const stripe = require('stripe')('sk_test_JeQ2cigQcaMk3INVX6NW1uTX');
+
+
 mongoose.connect
 const app = express();
 app.use(bodyParser.json());
@@ -9,7 +13,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.post('/api/form', (req, res) => {
    
-   nodemailer.createTestAccount((err, account)=>{
+    nodemailer.createTestAccount((err, account)=>{
     const htmlEmail = `<h3>Contact Detail</h3>
     <ul>
     <li>Name: ${req.body.name}</li>
@@ -18,6 +22,8 @@ app.post('/api/form', (req, res) => {
     <li>Bedrooms: ${req.body.bedrooms}</li>
     <li>Bathrooms: ${req.body.bathrooms}</li>
     <li>Price: ${req.body.price}</li>
+    <li>Token: ${req.body.newtoken}</li>
+
     </ul>
     
     `
@@ -29,16 +35,17 @@ app.post('/api/form', (req, res) => {
      
 
     }
-
+ 
 
     });
 
     let mailOptions = {
      from: 'Boston Maids',
-     to: req.body.email,
+     to: 'glorysgomez@gmail.com' ,
      subject: 'Cleaning',
      text: 'Cleaning Booking',
-     html: htmlEmail
+     html: htmlEmail,
+
 
 
 
@@ -60,6 +67,27 @@ console.log(err);
 
 
     });
+});
+
+//app.post('/api/stripe', (req, res) => {console.log(req.body)});
+app.post('/api/stripe', async (req, res) => {
+   
+   const charge = await stripe.charges.create({
+        amount: 5000,
+        currency: 'usd',
+        description: 'Cleaning Services',
+        source: req.body.id
+        
+
+    })
+    
+
+    
+     
+     
+
+
+
 });
 
 
