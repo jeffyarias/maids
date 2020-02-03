@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import './modal2.css';
 
 const modal2 = (props)=> {
@@ -16,4 +16,4 @@ return (
 );
 }
 
-export default modal2;
+export default modal2; */

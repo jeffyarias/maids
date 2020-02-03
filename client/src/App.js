@@ -4,25 +4,32 @@ import Navar from './components/navbar';
 import Footer from './components/footer';
 import Booking from './components/Booking';
 import Payments from './components/Payments';
-
-
-
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
-
+//import BookingModal2 from './components/BookingModal2';
+//import Modal from './components/modal';
+import Main from './components/main';
 function App() {
   return (
+    <BrowserRouter>
     <div>
-     <Navar />
+
+    <Main />
+
+
+
+{/* <Navar />
      <Slider />
      <Booking />
-     <Payments />
-     <Footer />
-      
+     <Footer /> */}
+     
+    
 
 
 
 
     </div>
+   </BrowserRouter>
   );
 }
 

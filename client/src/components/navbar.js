@@ -24,9 +24,9 @@ return (
   </div>
   
   <div className="nav-links">
-    <a href="#" target="_blank">Book Now</a>
-    <a href="#" target="_blank"></a>
-    <a href="#" target="_blank">LinkedIn</a>
+    <a href="/" target="_blank">Book Now</a>
+    <a href="/success" target="_blank"></a>
+    <a href="/about" target="_blank">About Us</a>
     
   </div>
 </div>

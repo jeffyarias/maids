@@ -9,8 +9,8 @@ return(
 
 
 <StripeCheckout 
-
 amount={2000}
+label="Credit Card"
 name="Boston Maids"
 email="jeffreyarias21@gmail.com"
 token={ token => console.log(token)}

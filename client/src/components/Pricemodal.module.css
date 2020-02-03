@@ -1,6 +1,6 @@
 
 
-.modal3 {
+.pricemodal {
   position: fixed;
   top: 63%;
   left: 75%;
@@ -13,7 +13,7 @@
  
 }
 
-#modalHeader3 {
+.pricemodalHeader {
     
     background-color: lightblue;
     border: 1 px solid darkblue;
