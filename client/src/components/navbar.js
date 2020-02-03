@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import nav from  '../navbar.css';
 
@@ -38,4 +39,46 @@ return (
 };
 
 
+=======
+import React from 'react';
+import nav from  '../navbar.css';
+
+
+
+
+const navbar = ()=> {
+
+return (
+
+<div class="nav">
+  <input type="checkbox" id="nav-check"/>
+  <div class="nav-header">
+    <div class="nav-title">
+      Boston Maids
+    </div>
+  </div>
+  <div className="nav-btn">
+    <label for="nav-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  
+  <div className="nav-links">
+    <a href="/" target="_blank">Book Now</a>
+    <a href="/success" target="_blank"></a>
+    <a href="/about" target="_blank">About Us</a>
+    
+  </div>
+</div>
+
+
+
+)
+
+};
+
+
+>>>>>>> e6ca041f8984e019191b23abc25f401e7a164900
 export default navbar;
