@@ -64,8 +64,8 @@ const customer = await stripe.customers.create({
          let transporter = nodemailer.createTransport({
          service: 'gmail',
          auth: {
-          user: 'jeffreyarias21@gmail.com',
-          pass: '182177!Scorpion'
+          user: '***********',
+          pass: '**********'
           
      
          }
@@ -75,7 +75,7 @@ const customer = await stripe.customers.create({
      
          let mailOptions = {
           from: 'Boston Maids',
-          to: 'jeffreyarias21@gmail.com' ,
+          to: '**************' ,
           subject: 'Cleaning',
           text: 'Cleaning Booking',
           html: htmlEmail,
